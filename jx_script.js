@@ -37,7 +37,7 @@
 
         // Monitor changes in viewport width
         window.addEventListener("resize", updatealloverlay);
-
+        
         // This function runs whenever viewport is changed
         function updatealloverlay()  {
             var vpwidth = window.innerWidth;
@@ -74,5 +74,5 @@
             str = width + "px";
             overlay.style.width=str;
         }
-        
+        updatealloverlay();
         setInterval(updatealloverlay,1000);
