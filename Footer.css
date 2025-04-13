@@ -33,3 +33,13 @@ footer .copyright {
   padding-top: 20px;
   font-size: 0.9rem;
 }
+
+@media (max-width: 625px) {
+  .footer-content {
+      flex-direction: column;
+  }
+  
+  .footer-content div {
+    width:90%;
+  }
+}
