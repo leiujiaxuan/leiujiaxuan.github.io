@@ -2,13 +2,14 @@ body {
     height: 100%;
     width: 100%;
     margin: 0;
+    font-family: 'Poppins', sans-serif;
+    text-align: left;
+    word-spacing: 4px;
+    line-height: 1.5;
 }
 
 .bannerimage {
     background-color: lightblue; 
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), 
-                    rgba(0, 0, 0, 0.4)), url("johor.jpg");
-    /* Position and center the image to scale nicely on all screens */
     background-position: center;
     background-repeat: no-repeat;
     background-size:cover;
@@ -17,9 +18,13 @@ body {
     margin:0;
     color:white;
     text-align: center;
-    font-size:4em;
+    font-size: 3em;
+    font-family:'Agency FB Bold';
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    font-weight: 900;
     animation: fade-in 2s;
 }
+
 .container {
     margin:4vh 50px;
     position:relative;
@@ -27,20 +32,16 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    text-align: center;
     opacity:0;
 }        
 
 .container-reverse {
     margin:4vh 50px;
-    /* background-color: plum; */
     position:relative;
-    /* max-width: 1200px; */
     display:flex;
     flex-direction: row-reverse;
     align-items: center;
     justify-content: center;
-    text-align: center;
     opacity:0;
 }
 
@@ -58,41 +59,31 @@ body {
 }
 
 .title{
-    font-size: 50px;
-    text-align: left;
+    font-size: 36px;
+    font-weight: bold;
     left:2vw;
     position:relative;
     margin: 0 2vw 0 0;
-    /* background-color: red; */
-}
-
-.text{
-    font-size: 20px;
-    text-align: justify;
-    left:2vw;
-    margin: 0 2vw 0 0;
-    position:relative;
-    word-spacing:8px;
-    line-height: 1.8;
-    /* background-color:red; */
 }
 
 .title-reverse{
-    font-size: 50px;
-    text-align: left;
+    font-size: 36px;
+    font-weight: bold;
     position:relative;
     margin: 0 2vw 0 0;
-    /* background-color: red; */
 }
 
-.text-reverse{
-    font-size: 20px;
-    text-align: justify;
+.text{
+    left:2vw;
     margin: 0 2vw 0 0;
     position:relative;
-    word-spacing:8px;
-    line-height: 1.8;
-    /* background-color:red; */
+}
+
+
+
+.text-reverse{
+    margin: 0 2vw 0 0;
+    position:relative;
 }
 
 .overlay {
@@ -134,6 +125,13 @@ div.fade-out{
     .container, .container-reverse {
         flex-direction: column;
     }
+}
+
+@font-face {
+    font-family: 'Agency FB Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Agency FB Bold'), url('AGENCYB.woff') format('woff');
 }
 
 @keyframes fade-in {

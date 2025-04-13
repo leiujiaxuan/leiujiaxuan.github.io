@@ -66,14 +66,13 @@
         var picture, width, overlay;
         picture = document.getElementById(imgnameID);
         width = picture.width;
-        console.log(picture.width);
         overlay = document.getElementById(overlayID);
         let str = width + "px";
         overlay.style.width=str;
     }
     window.addEventListener("resize", () => updatealloverlay(img1,img2,img3,overlay1,overlay2,overlay3));
-
-    // run updatealloverlay() function after page loaded 1 second to fix incorrect width of image overlay text
+    
+    // this function is run to fix incorrect width of image overlay text when page loaded
     setTimeout(()=>{
         updatealloverlay(img1,img2,img3,overlay1,overlay2,overlay3);
     },1000);
