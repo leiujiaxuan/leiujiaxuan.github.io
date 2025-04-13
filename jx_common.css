@@ -6,7 +6,7 @@ body,html {
     text-align: left;
     word-spacing: 4px;
     line-height: 1.5;
-    overflow: visible;
+    overflow: hidden;
 }
 
 .bannerimage {
@@ -55,7 +55,7 @@ body,html {
     /* background-color: blue; */
     margin:0;
     min-width:100px;
-    max-width: 400px;
+    max-width:100px;
 }
 
 .title{
