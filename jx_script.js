@@ -26,6 +26,8 @@
     });
     },{ threshold: [0.25] });
 
+
+    // select classes: .container, .container-reverse
     const allAnimatedElements1 = document.querySelectorAll('.container');
     const allAnimatedElements2 = document.querySelectorAll('.container-reverse');
 
@@ -41,27 +43,30 @@
         updateoverlay_width(img2,overlay2);
         updateoverlay_width(img3,overlay3);
 
-
+        // below changing maximum width to every image in the webpage based on currect viewport width
         if (vpwidth < 1200){
+            // change every images maxwidth to be the same as textbox width
             let descriptionbox = document.querySelector('.description');
             let textwidth= descriptionbox.offsetWidth;
-            // document.class.img.style.width = textwidth;
             let image = document.querySelectorAll('.img');
-            // Apply styles to each '.img' element
+
+            // Apply styles to each '.img' element, changing the width
             image.forEach(image => {
                 let newrule = textwidth + "px";
                 image.style.maxWidth = newrule; // Update max-width
             });
         }
         else {
+            // change every image maxwidth to 400px
             let image = document.querySelectorAll('.img');
+
             // Apply styles to each '.img' element
             image.forEach(image => {
                 image.style.maxWidth = "400px"; // Update max-width
             });
         }
     }
-    // This function turn
+    // This function change image overlay text width to be same as textbox
     function updateoverlay_width(imgnameID,overlayID){
         var picture, width, overlay;
         picture = document.getElementById(imgnameID);
@@ -70,8 +75,11 @@
         let str = width + "px";
         overlay.style.width=str;
     }
+
+    // listen to resizing browser, run updatealloverlay() when browser is resized
     window.addEventListener("resize", () => updatealloverlay(img1id,img2id,img3id,overlay1,overlay2,overlay3));
     updatealloverlay(img1id,img2id,img3id,overlay1,overlay2,overlay3);
+
     // this function is run to fix incorrect width of image overlay text when page loaded
     setTimeout(()=>{
         updatealloverlay(img1id,img2id,img3id,overlay1,overlay2,overlay3);

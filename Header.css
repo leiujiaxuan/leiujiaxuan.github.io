@@ -39,3 +39,91 @@ nav a {
 nav a:hover {
   color: #ffc107;
 }
+
+#checkbox{
+  display:none;
+}
+
+/* Style the label to look like a hamburger menu */
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+}
+
+/* Style each "line" of the hamburger menu */
+.hamburger-menu span {
+  display: block;
+  height: 4px;
+  background-color: white;
+  border-radius: 2px; /* Slightly round the edges */
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+}
+
+/* Dropdown menu styling */
+.dropdown-menu {
+  position: absolute;
+  top: 100%; /* Below the "States" link */
+  left: 0;
+  width:100px;
+  background-color: black;
+  border: 1px solid #ddd;
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-menu a {
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  display: block;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f0f0f0;
+}
+
+/* Display menu on hover */
+.dropdown:hover .dropdown-menu {
+  display: flex;
+}
+
+/* for "mobile browser": viewport width below 800px */
+@media (max-width: 800px){
+  header{
+    padding:1rem 1rem;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns logo to the top-left */
+    justify-content: unset;
+  }
+
+  nav{
+    top: 5vh;
+    flex-direction: column;
+    margin-right: 50px;
+    align-content: flex-start;
+    position: relative;
+    display:none;
+  } 
+
+  nav a {
+    display:inline-block;
+  }
+  .logo{
+    font-size:1.3rem;
+  }
+
+  .hamburger-menu {
+    display:flex;
+  }
+ 
+}
