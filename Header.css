@@ -73,7 +73,7 @@ nav a:hover {
   position: absolute;
   top: 100%; /* Below the "States" link */
   left: 0;
-  width:100px;
+  width:120px;
   background-color: black;
   border: 1px solid #ddd;
   display: none; /* Hidden by default */
@@ -114,10 +114,7 @@ nav a:hover {
     position: relative;
     display:none;
   } 
-
-  nav a {
-    display:inline-block;
-  }
+  
   .logo{
     font-size:1.3rem;
   }

@@ -12,16 +12,6 @@
             background-image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)), url('JohorImg/johor.jpg');
         }
     </style>
-    <script>
-        // declaring variable for external javascript to handle overlay text's width on image
-        let img1id="sultanImg";
-        let img2id="desaruImg";
-        let img3id="fireflyImg";
-        let overlay1="sultan";
-        let overlay2="desaru";
-        let overlay3="firefly";
-    </script>
-    <script type="text/javascript" src="jx_script.js" defer></script>
 
     <link rel="stylesheet" href="Header.css">
     <header>
@@ -53,6 +43,32 @@
           <a href="#">Contact Us</a>
         </nav>
     </header>
+    <script>
+        // declaring variable for external javascript to handle overlay text's width on image
+        let img1id="sultanImg";
+        let img2id="desaruImg";
+        let img3id="fireflyImg";
+        let overlay1="sultan";
+        let overlay2="desaru";
+        let overlay3="firefly";
+    </script>
+    <script type="text/javascript" src="jx_script.js" defer></script>
+    <script type="text/javascript">
+        document.querySelector('#checkbox').addEventListener('change', function () {
+        const header = document.querySelector('header');
+        const display = document.querySelector('nav');
+        if (this.checked) {
+            header.style.height = '100%';
+            display.style.display = 'flex';
+
+        } else {
+            header.style.height = 'auto';
+            display.style.display = 'none';
+        }
+    });
+
+    </script>
+
 
 </head>
 <body>
