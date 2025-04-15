@@ -1,0 +1,41 @@
+header {
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  padding: 1rem 2rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.logo {
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+/* Nav Items */
+nav {
+  display: flex;
+  gap: 1.5rem;
+  margin-right: 3vw; /* add space from right edge */
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ffc107;
+}

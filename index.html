@@ -3,38 +3,56 @@
 <head>
     <link rel="stylesheet" href="Footer.css">
     <link rel="stylesheet" href="jx_common.css">
+    <link rel="stylesheet" href="Header.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Johor</title>
+    <title>Top 3 Places in Johor</title>
     <style type="text/css">
         div.bannerimage{
-            background-image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)), url('johor.jpg');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)), url('JohorImg/johor.jpg');
         }
     </style>
     <script>
-        // declaring variable for external javascript
-        let img1="sultanImg";
-        let img2="desaruImg";
-        let img3="fireflyImg";
+        // declaring variable for external javascript to handle overlay text's width on image
+        let img1id="sultanImg";
+        let img2id="desaruImg";
+        let img3id="fireflyImg";
         let overlay1="sultan";
         let overlay2="desaru";
         let overlay3="firefly";
     </script>
     <script type="text/javascript" src="jx_script.js" defer></script>
 
+    <link rel="stylesheet" href="Header.css">
+    <header>
+        <a href="#" class="logo" id="logoLink">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="white" height="24" width="24" viewBox="0 0 24 24">
+            <path d="M12 2C8.14 2 5 5.14 5 9c0 4.25 4.5 9.92 6.39 12.16a1 1 0 0 0 1.54 0C14.5 18.92 19 13.25 19 9c0-3.86-3.14-7-7-7zm0 16.88C10.13 16.21 7 11.94 7 9a5 5 0 0 1 10 0c0 2.94-3.13 7.21-5 9.88zM12 11.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/>
+          </svg>
+          <span>Malaysia's Places</span>
+        </a>
+        
+        <nav>
+          <a href="#">About</a>
+          <a href="#">FAQ</a>
+          <a href="#">States</a>
+          <a href="#">Contact Us</a>
+        </nav>
+    </header>
+
 </head>
 <body>
     <div class="bannerimage">
-        <p>Explore Johor: The southern jewel of Malaysia</p>
+        <p>Top 3 Places in Johor</p>
     </div>
 
     <div class="container">
         <div>
             <div class="overlay" id="sultan">Sultan Abu Bakar Mosque</div>
-            <div><img src="sultan.jpg" class="img" id="sultanImg" alt="[img not found]" /></div>
+            <div><img src="JohorImg/sultan.jpg" class="img" id="sultanImg" alt="[img not found]" /></div>
         </div>
         <div class="description">
-            <p class="title"> Sultan Abu Bakar Mosque</p>
+            <p class="title"> 1. Sultan Abu Bakar Mosque</p>
             <p class="text"> Sultan Abu Bakar State Mosque is the state mosque of Johor, constructed between <b>1892 and 1900</b>.
                 The mosque is set out to recreate colonial English Victorian architecture. The mosque features some Moorish architecture elements 
                 along with some Malay influence. </p>
@@ -44,10 +62,10 @@
     <div class="container-reverse">
         <div>
             <div class="overlay" id="desaru">Desaru</div>
-            <img src="desaru.jpg" class="img" id="desaruImg" alt="[img not found]" />
+            <img src="JohorImg/desaru.jpg" class="img" id="desaruImg" alt="[img not found]" />
         </div>
         <div class="description">
-            <p class="title-reverse"> Desaru </p>
+            <p class="title-reverse"> 2. Desaru </p>
             <p class="text-reverse"> Desaru offers a wide range of attractions, from its pristine beaches and thrilling water activities to 
                 fun-filled experiences at the waterpark and mini golf. With so much to explore, Desaru promises an unforgettable experience. </p>
         </div>
@@ -57,10 +75,10 @@
     <div class="container">
         <div>
             <div class="overlay" id="firefly">Kota Tinggi Firefly Park</div>
-            <img src="KotaTinggiFireflyPark.webp" class="img" id="fireflyImg" />
+            <img src="JohorImg/KotaTinggiFireflyPark.webp" class="img" id="fireflyImg" />
         </div>
         <div class="description">
-            <p class="title"> Kota Tinggi Firefly Park</p>
+            <p class="title"> 3. Kota Tinggi Firefly Park</p>
             <p class="text"> Kota Tinggi Firefly Park offers a magical experience with thousands of fireflies lighting up the mangroves along the Johor River. 
                 You can enjoy serene night time boat tours while looking at beautiful glowing fireflies, and learn facts about fireflies.
         </div>

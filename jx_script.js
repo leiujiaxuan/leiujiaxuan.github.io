@@ -70,9 +70,9 @@
         let str = width + "px";
         overlay.style.width=str;
     }
-    window.addEventListener("resize", () => updatealloverlay(img1,img2,img3,overlay1,overlay2,overlay3));
-    updatealloverlay(img1,img2,img3,overlay1,overlay2,overlay3);
+    window.addEventListener("resize", () => updatealloverlay(img1id,img2id,img3id,overlay1,overlay2,overlay3));
+    updatealloverlay(img1id,img2id,img3id,overlay1,overlay2,overlay3);
     // this function is run to fix incorrect width of image overlay text when page loaded
     setTimeout(()=>{
-        updatealloverlay(img1,img2,img3,overlay1,overlay2,overlay3);
+        updatealloverlay(img1id,img2id,img3id,overlay1,overlay2,overlay3);
     },1000);
