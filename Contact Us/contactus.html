@@ -1,18 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="Footer.css">
-    <link rel="stylesheet" href="jx_common.css">
-    <link rel="stylesheet" href="Header.css">
+    <link rel="stylesheet" href="../Footer.css">
+    <link rel="stylesheet" href="../jx_common.css">
+    <link rel="stylesheet" href="../Header.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Top 3 Places in Melaka</title>
+    <title>Contact Us</title>
     <style>
-        div.bannerimage{
-            background-image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)), url('MelakaImg/background.jpg');
+        div.bannerimage {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)), url('banner.jpg');
         }
-        .overlay {
+        form {
+            display: flex; 
+            flex-direction: column; 
+            width: 300px; 
+            margin: auto;
+        }
+        #feedback {
+            height:200px;
+        }
+
+        button {
+            max-width:100px;
+        }
+
+        input {
+            margin-bottom: 20px;
+        }
+        .container{
             opacity: 1;
+        }
+
+        @media(max-width:400px){
+            form {
+                width:200px;
+            }
         }
     </style>
     <header>
@@ -52,20 +75,10 @@
           </div>
           <a href="#">About</a>
           <a href="#">FAQ</a>
-          <a href="Contact Us/contactus.html">Contact Us</a>
+          <a href="#">Contact Us</a>
         </nav>
     </header>
-    <script>
-        // declaring variable for external javascript to handle overlay text's width on image
-        let img1id="i1";
-        let img2id="i2";
-        let img3id="i3";
-        let overlay1="o1";
-        let overlay2="o2";
-        let overlay3="o3";
-    </script>
-    <script src="jx_script.js" defer></script>
-    <script src="melaka.js" defer></script>
+
     <script>
         document.querySelector('#checkbox').addEventListener('change', function () {
         const header = document.querySelector('header');
@@ -83,57 +96,26 @@
     <!-- get Facebook api javascript -->
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v22.0"></script>
+    <script src="contactscript.js" defer></script>
 </head>
 <body>
     <div class="bannerimage">
-        <p>Top 3 Places in Melaka</p>
+        <p>Contact Us</p>
     </div>
 
     <div class="container">
-        <div>
-            <div class="overlay" id="o1"> Christ Church Melaka </div>
-            <div><img src="MelakaImg/red_church.jpg" class="img" id="i1" alt="[img1sets.jpg]"></div>
-        </div>
-        <div class="description">
-            <p class="title"> 1. Dutch Square (Red Square) </p>
-            <p class="text"> Dutch Square, also called Red Square, is a famous spot in Melaka, known for its bright red buildings.
-                It's a great place to visit historical landmarks like Christ Church and Stadthuys or check out the pretty Queen Victoria Fountain. 
-                You'll also find colorful trishaws, souvenir shops, and plenty of spots to snap photos. 
-                Take a walk around to soak in the unique mix of Dutch and British history in one charming area. </p>
-        </div>
-    </div>
-
-    <div class="container-reverse">
-        <div>
-            <div class="overlay" id="o2"> Saint Paul's Church </div>
-            <img src="MelakaImg/st-paul_church.jpg" class="img" id="i2" alt="[img2sets.jpg]">
-        </div>
-        <div class="description">
-            <p class="title-reverse"> 2. St. Paul's Hill & Church </p>
-            <p class="text-reverse"> St. Paul's Hill, also known as Bukit St. Paul, it was originally called 
-                Malacca Hill during the Sultanate period and later renamed Mary's Hill by the Portuguese. It was subsequently renamed St. Paul's Hill 
-                by the Dutch in honor of the church at its summit. 
-                At the summit, you'll find the ruins of St. Paul's Church, one of the oldest European church structure in Southeast Asia, built in 1521.
-                Outside the church, there is a big white statue of St. Francis Xavier, a Catholic missionary from Spain who traveled across Asia to spread Christianity. 
-                The reason for the statue’s missing right hand remains unknown to this day.
-                nside the church, you can find an open grave that originally held the remains of St. Francis Xavier after his death in 1552, 
-                though his body was later transferred to Goa, India.</p>
-        </div>
-    </div>
-
-    <div class="container">
-        <div>
-            <div class="overlay" id="o3">A Famosa</div>
-            <img src="MelakaImg/A Famosa.jpg" class="img" id="i3" alt="[img3sets.jpg]">
-        </div>
-        <div class="description">
-            <p class="title"> 3. A Famosa</p>
-            <p class="text"> A Famosa, meaning "The Famous" in Portuguese, is one of Melaka's most iconic historical landmarks. 
-                Built in 1511 by the Portuguese, it was originally a massive fortress designed to protect their settlement and control trade routes 
-                through the Straits of Malacca. Today, only the Porta de Santiago gate remains, offering a glimpse into its grand past.
-                Around A Famosa, you might come across street performers, such as someone posing as a golden statue.
-            </p>
-        </div>
+        <form action="#" id="feedbackform" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        
+            <label for="feedback">Feedback:</label>
+            <textarea id="feedback" name="feedback" required style="resize: none;"></textarea>
+        
+            <button type="submit" id="submit" style="margin-top: 10px;">Submit</button>
+        </form>
     </div>
 
     <footer>
@@ -156,7 +138,6 @@
         </div>
         <p class="copyright">©2025 Malaysia's Places. All rights reserved.</p>
     </footer>
-
 
 </body>
 
