@@ -7,19 +7,25 @@
     <link rel="stylesheet" href="contactstyle.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
+    <title>Feedbacks</title>
     <style>
         div.bannerimage {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)), url('banner.jpg');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)), url('bannerimage.jpg');
         }
-
         .container{
             flex-direction: column;
         }
-
-        h1 {
-            margin-bottom: 0;
+        .description{
+            width:700px;
+            max-width: unset;
         }
+        @media(max-width: 800px){
+            .description{
+            width:300px;
+            max-width: unset;
+            }
+        }
+
     </style>
     <header>
         <a href="#" class="logo" id="logoLink">
@@ -61,52 +67,51 @@
           <a href="contactus.html">Contact Us</a>
         </nav>
     </header>
-
-    <script>
-        document.querySelector('#checkbox').addEventListener('change', function () {
-        const header = document.querySelector('header');
-        const display = document.querySelector('nav');
-        if (this.checked) {
-            header.style.height = '100%';
-            display.style.display = 'flex';
-
-        } else {
-            header.style.height = 'auto';
-            display.style.display = 'none';
-        }
-    });
-    </script>
-    <script src="contactscript.js" defer></script>
-    <!-- get Facebook api javascript -->
-    <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v22.0"></script>
-
 </head>
 <body>
     <div class="bannerimage">
-        <p>Contact Us</p>
-    </div>
-    <div style="justify-content: center; display:flex">
-        <h1> Share your feedback</h1>
+        <p>Feedback</p>
     </div>
     <div class="container">
-        <form action="#" id="feedbackform" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-        
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-        
-            <label for="feedback">Feedback:</label>
-            <textarea id="feedback" name="feedback" required style="resize: none;"></textarea>
-        
-            <button type="submit" id="submit" style="margin-top: 10px;">Submit</button>
-        </form>
-        
-        <form action="showfeedback.html">
-            <input type="submit" value="See other users Feedback" style="margin-top: 10px; max-width: 200px;" />
-        </form>
+
     </div>
+
+    <script>
+        // get JSON data from JSONBin API
+        const apiKey = '$2a$10$zadHyt2fNyCJgiATwc7qqOv63doxV4zByMnA7mBb004ym8SecjmmO'; // Replace with your API key
+        var fetcheddata;
+        fetch(`https://api.jsonbin.io/v3/b/680076f38a456b79668b15cb`, {
+            method: 'GET',
+            headers: {
+                'X-Master-Key': apiKey, // API key for authentication
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            // get data from JSONBin
+            fetcheddata = data.record; 
+            console.log("fetched data below:");
+            console.log(JSON.stringify(fetcheddata,null,2));
+
+            // print all availble data from JSONBin to webpage
+            content = document.querySelector(".container");
+            fetcheddata.forEach(data => {
+                content.innerHTML += 
+                `<div class="description">
+                    <p> <b>${data.name}</b> &nbsp&nbsp&nbsp ${data.email}</p>
+                    <p>${data.feedback}</p>
+                </div>`
+               
+            });
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error);
+        });
+    </script>
+     <!-- get Facebook api javascript -->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v22.0"></script>
 </body>
 
 <footer>

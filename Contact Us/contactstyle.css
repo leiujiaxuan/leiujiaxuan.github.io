@@ -1,0 +1,28 @@
+
+form {
+    display: flex; 
+    flex-direction: column; 
+    width: 300px; 
+    margin: auto;
+}
+#feedback {
+    height:200px;
+}
+
+button {
+    margin-top: 20px;
+    max-width:100px;
+}
+
+input {
+    margin-bottom: 20px;
+}
+.container{
+    opacity: 1;
+}
+
+@media(max-width:400px){
+    form {
+        width:200px;
+    }
+}
