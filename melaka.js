@@ -100,6 +100,7 @@ function changeImage3(){
     // After the fade-out completes (1 second), change the content and fade in
     setTimeout(()=>{
     overlay.innerHTML = overlay3arr[index3];
+    img.src = '';
     img.src = image3arr[index3];
     index3 = index3 + 1;
     if(index3 == image3arr.length)
