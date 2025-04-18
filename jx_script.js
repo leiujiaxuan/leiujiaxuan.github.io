@@ -83,10 +83,10 @@ function updateoverlay_width(imgnameID,overlayID){
     // update all content's size inside webpage
     updatecontentsize(img1id,img2id,img3id,overlay1,overlay2,overlay3);
     // this function is run to fix incorrect width of image overlay text when page loaded
-    setTimeout(()=>{
+    setInterval(()=>{
         updatecontentsize(img1id,img2id,img3id,overlay1,overlay2,overlay3);
     },1000);
-
+    
 
 
 // code below is not being used 

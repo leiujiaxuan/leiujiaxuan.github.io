@@ -32,11 +32,9 @@ const overlay3arr = [
     "Stree Performer"
 ];
 
-
 let index1 = 1;
 let index2 = 1;
 let index3 = 1;
-
 
 // below function change melaka.html contents' images and texts to the image and text specified in the array above.
 function changeImage1(){
@@ -52,6 +50,7 @@ function changeImage1(){
     // After the fade-out completes (1 second), change the content and fade in
     setTimeout(()=>{
         overlay.innerHTML = overlay1arr[index1];
+        img.src = '';
         img.src = image1arr[index1];
         index1 = index1 + 1;
         if(index1 == image1arr.length)
@@ -77,6 +76,7 @@ function changeImage2(){
     // After the fade-out completes (1 second), change the content and fade in
     setTimeout(()=>{
     overlay.innerHTML = overlay2arr[index2];
+    img.src = '';
     img.src = image2arr[index2];
     index2 = index2 + 1;
     if(index2 == image2arr.length)
