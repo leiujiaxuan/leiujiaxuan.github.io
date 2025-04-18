@@ -1,0 +1,226 @@
+header {
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  padding: 1rem 2rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.logo {
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+/* Nav Items */
+nav {
+  display: flex;
+  gap: 1.5rem;
+  margin-right: 3vw; /* add space from right edge */
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ffc107;
+}
+
+#checkbox{
+  display:none;
+}
+
+/* Style the label to look like a hamburger menu */
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+}
+
+/* Style each "line" of the hamburger menu */
+.hamburger-menu span {
+  display: block;
+  height: 4px;
+  background-color: white;
+  border-radius: 2px; /* Slightly round the edges */
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+}
+
+/* Dropdown menu styling */
+.dropdown-menu {
+  position: absolute;
+  top: 100%; /* Below the "States" link */
+  left: 0;
+  width:120px;
+  background-color: black;
+  border: 1px solid #ddd;
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-menu a {
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  display: block;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f0f0f0;
+}
+
+/* Display menu on hover */
+.dropdown:hover .dropdown-menu {
+  display: flex;
+}
+
+/* for "mobile browser": viewport width below 800px */
+@media (max-width: 800px){
+  header{
+    padding:1rem 1rem;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns logo to the top-left */
+    justify-content: unset;
+  }
+
+  nav{
+    top: 5vh;
+    flex-direction: column;
+    margin-right: 50px;
+    align-content: flex-start;
+    position: relative;
+    display:none;
+  } 
+  
+  .logo{
+    font-size:1.3rem;
+  }
+
+  .hamburger-menu {
+    display:flex;
+  }
+ 
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f7f7f7;
+  color: #222;
+  background-image: url('images/klcity.jpg');
+  background-size: cover;        
+  background-repeat: no-repeat;   
+  background-position: center;   
+  background-attachment: fixed;
+}
+
+.head {
+  height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.head .content {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 20px;
+  max-width: 800px;
+  border-radius: 10px;
+}
+
+.destinations {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 40px 60px;
+}
+
+.location {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.location:hover {
+  transform: translateY(-5px);
+}
+
+.location img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+}
+
+.content-box {
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+.content-box h2 {
+  margin-top: 0;
+  color: #1e90ff;
+}
+
+footer {
+  background-color: #12121c;
+  color: #fff;
+  padding: 40px 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1000px;
+  margin-bottom: 20px;
+}
+
+.footer-content div {
+  width: 45%;
+  margin-bottom: 20px;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+footer .copyright {
+  text-align: center;
+  border-top: 1px solid #333;
+  padding-top: 20px;
+  font-size: 0.9rem;
+}
