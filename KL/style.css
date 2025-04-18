@@ -60,6 +60,7 @@ body {
   justify-content: center;
   text-align: center;
   position: relative;
+  padding-top:100px;
 }
 
 .head .content {
@@ -104,38 +105,4 @@ body {
 .content-box h2 {
   margin-top: 0;
   color: #1e90ff;
-}
-
-footer {
-  background-color: #12121c;
-  color: #fff;
-  padding: 40px 60px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  width: 100%;
-  max-width: 1000px;
-  margin-bottom: 20px;
-}
-
-.footer-content div {
-  width: 45%;
-  margin-bottom: 20px;
-}
-
-footer p {
-  margin: 5px 0;
-}
-
-footer .copyright {
-  text-align: center;
-  border-top: 1px solid #333;
-  padding-top: 20px;
-  font-size: 0.9rem;
 }

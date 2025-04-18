@@ -12,12 +12,13 @@ body {
 }
 
 .head {
-  height: 350px;
+  height: 450px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   position: relative;
+  padding-top:100px;
 }
 
 .head .content {
