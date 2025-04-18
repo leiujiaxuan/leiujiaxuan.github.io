@@ -7,13 +7,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Top 3 Places in Johor</title>
-    <style type="text/css">
+    <link rel="stylesheet" href="Header.css">
+    <style>
         div.bannerimage{
             background-image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)), url('JohorImg/johor.jpg');
         }
     </style>
-
-    <link rel="stylesheet" href="Header.css">
     <header>
         <a href="#" class="logo" id="logoLink">
             <label class="hamburger-menu">
@@ -63,23 +62,8 @@
         let overlay2="desaru";
         let overlay3="firefly";
     </script>
-    <script type="text/javascript" src="jx_script.js" defer></script>
-    <script type="text/javascript">
-        document.querySelector('#checkbox').addEventListener('change', function () {
-        const header = document.querySelector('header');
-        const display = document.querySelector('nav');
-        if (this.checked) {
-            header.style.height = '100%';
-            display.style.display = 'flex';
-
-        } else {
-            header.style.height = 'auto';
-            display.style.display = 'none';
-        }
-    });
-
-    </script>
-
+    <script src="jx_script.js" defer></script>
+    <script src="header.js" defer></script>
 
 </head>
 <body>
