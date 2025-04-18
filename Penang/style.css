@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f7f7f7;
+  color: #222;
+  background-image: url('image/Penang.jpg');
+  background-size: cover;        
+  background-repeat: no-repeat;   
+  background-position: center;   
+  background-attachment: fixed;
+}
+
+.head {
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.head .content {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 20px;
+  max-width: 800px;
+  border-radius: 10px;
+}
+
+.destinations {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 40px 60px;
+}
+
+.location {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.location:hover {
+  transform: translateY(-5px);
+}
+
+.location img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+}
+
+.content-box {
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+.content-box h2 {
+  margin-top: 0;
+  color: #1e90ff;
+}
+
+footer {
+  background-color: #12121c;
+  color: #fff;
+  padding: 40px 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1000px;
+  margin-bottom: 20px;
+}
+
+.footer-content div {
+  width: 45%;
+  margin-bottom: 20px;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+footer .copyright {
+  text-align: center;
+  border-top: 1px solid #333;
+  padding-top: 20px;
+  font-size: 0.9rem;
+}

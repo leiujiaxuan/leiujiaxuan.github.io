@@ -1,0 +1,235 @@
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+    background-color: #fdfdfd;
+    line-height: 1.6;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    padding: 1rem 2rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Logo */
+  .logo {
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* Nav Items */
+  nav {
+    display: flex;
+    gap: 1.5rem;
+    margin-right: 3vw; /* add space from right edge */
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  nav a:hover {
+    color: #ffc107;
+  }
+  
+  #checkbox{
+    display:none;
+  }
+  
+  /* Style the label to look like a hamburger menu */
+  .hamburger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+  }
+  
+  /* Style each "line" of the hamburger menu */
+  .hamburger-menu span {
+    display: block;
+    height: 4px;
+    background-color: white;
+    border-radius: 2px; /* Slightly round the edges */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  /* Dropdown container */
+  .dropdown {
+    position: relative;
+  }
+  
+  /* Dropdown menu styling */
+  .dropdown-menu {
+    position: absolute;
+    top: 100%; /* Below the "States" link */
+    left: 0;
+    width:120px;
+    background-color: black;
+    border: 1px solid #ddd;
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dropdown-menu a {
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    display: block;
+  }
+  
+  .dropdown-menu a:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* Display menu on hover */
+  .dropdown:hover .dropdown-menu {
+    display: flex;
+  }
+  
+  /* for "mobile browser": viewport width below 800px */
+  @media (max-width: 800px){
+    header{
+      padding:1rem 1rem;
+      flex-direction: column;
+      align-items: flex-start; /* Aligns logo to the top-left */
+      justify-content: unset;
+    }
+  
+    nav{
+      top: 5vh;
+      flex-direction: column;
+      margin-right: 50px;
+      align-content: flex-start;
+      position: relative;
+      display:none;
+    } 
+    
+    .logo{
+      font-size:1.3rem;
+    }
+  
+    .hamburger-menu {
+      display:flex;
+    }
+   
+  }
+  
+
+/* Hero Section */
+.hero-about {
+    background-image: url('images/about.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    color: white;
+}
+
+.hero-about::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 0;
+}
+
+.hero-text {
+    z-index: 1;
+    max-width: 600px;
+    padding: 1rem;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+}
+
+/* Sections */
+.about-section, .story-section {
+    padding: 4rem 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-section h2, .story-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #222;
+}
+
+.about-section p, .story-section p {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Footer */
+footer {
+    background-color: #12121c;
+    color: #fff;
+    padding: 40px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1000px;
+    margin-bottom: 20px;
+  }
+  
+  .footer-content div {
+    width: 45%;
+    margin-bottom: 20px;
+  }
+  
+  footer p {
+    margin: 5px 0;
+  }
+  
+  footer .copyright {
+    text-align: center;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    font-size: 0.9rem;
+  }
