@@ -21,20 +21,6 @@
             margin-bottom: 0;
         }
     </style>
-    <script>
-        document.querySelector('#checkbox').addEventListener('change', function () {
-        const header = document.querySelector('header');
-        const display = document.querySelector('nav');
-        if (this.checked) {
-            header.style.height = '100%';
-            display.style.display = 'flex';
-
-        } else {
-            header.style.height = 'auto';
-            display.style.display = 'none';
-        }
-    });
-    </script>
     <script src="contactscript.js" defer></script>
 
 </head>
@@ -126,4 +112,19 @@
     </div>
     <p class="copyright">©2025 Malaysia's Places. All rights reserved.</p>
 </footer>
+<script>
+    document.querySelector('#checkbox').addEventListener('change', function () {
+    const header = document.querySelector('header');
+    const display = document.querySelector('nav');
+    if (this.checked) {
+        header.style.height = '100%';
+        display.style.display = 'flex';
+
+    } else {
+        header.style.height = 'auto';
+        display.style.display = 'none';
+    }
+});
+</script>
+
 </html>
