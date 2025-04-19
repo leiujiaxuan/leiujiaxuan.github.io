@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const learnMoreBtn = document.getElementById('learnMoreBtn');
   const videoSection = document.querySelector('.video-section');
   const logoLink = document.getElementById('logoLink');
+  const checkbox = document.getElementById('checkbox');
   const cookiePopup = document.getElementById('cookiePopup');
   const acceptCookiesBtn = document.getElementById('acceptCookies');
 
@@ -15,6 +16,20 @@ document.addEventListener('DOMContentLoaded', () => {
     logoLink.addEventListener('click', (e) => {
       e.preventDefault();
       window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  if (checkbox) {
+    checkbox.addEventListener('change', function () {
+      const header = document.querySelector('header');
+      const nav = document.querySelector('nav');
+      if (this.checked) {
+        header.style.height = '100%';
+        nav.style.display = 'flex';
+      } else {
+        header.style.height = 'auto';
+        nav.style.display = 'none';
+      }
     });
   }
 
@@ -50,19 +65,3 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
-
-const checkbox = document.getElementById('checkbox');
-checkbox.addEventListener('change', function () {
-  const header = document.querySelector('header');
-  const nav = document.querySelector('nav');
-  console.log("hi");
-  if (this.checked) {
-    header.style.height = '100%';
-    nav.style.display = 'flex';
-  } else {
-    header.style.height = 'auto';
-    nav.style.display = 'none';
-  }
-});
-  console.log("hi");
-
