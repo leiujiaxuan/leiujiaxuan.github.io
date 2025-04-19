@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e8e8ee;
+    color: #333;
+  }
+  
+  .header {
+    background-image: url('images/Malaysia.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 20px;
+    text-align: center;
+  }
+  
+  .header h1 {
+    font-size: 48px;
+    margin: 0;
+    font-weight: bold;
+    color: #efebf3;
+    text-shadow:
+    -1px -1px 0 black,
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black;
+  -webkit-text-stroke: 1px black;
+  }
+  
+  .content {
+    padding: 40px 80px;
+    background-color: #f3f3f3;
+    max-width: 1000px;
+    margin: auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  .content h2 {
+    color: #333366;
+  }
+  
+  .content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+  
+  .attraction {
+    margin-top: 30px;
+  }
+  
+  .attraction h3 {
+    color: #333366;
+  }
+  
+  .attraction ul {
+    list-style-type: square;
+    padding-left: 20px;
+    font-size: 1rem;
+  }
+
+  .attraction img {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    overflow: hidden; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .attraction img {
+    width: 75%;            
+    max-width: 75%;         
+    height: auto;            
+    display: block;          
+    border-radius: 10px;
+  }
+  
+  
